@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+    <div class="centered-container">
+        <div class="div1">
+            <h2 class="headers">Please enter your ID below to check if there are any important holidays.</h2>
+                <br/>
+                <lightning-input class="inputbar" label="ID Number"  value={searchTerm} onchange={handleInputChange}></lightning-input>
+                <br/>   
+                <div class="input-container">   
+                <lightning-button label="Search" variant="brand"  disabled={isSearchButtonDisabled} onclick={handleSearchClick}></lightning-button>
+            </div>
+            <div class="responseD">
+                <br/>
+                <p if:true={apiResponse}>{apiResponse}</p> 
+            </div>
+        </div>
+    </div>
+</lightning-card>
+</template>
